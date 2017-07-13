@@ -15,10 +15,10 @@ typedef vector<int> vi;
 
 int INF = 1000000000;
 
-int djikstra(int rows, int columns, vector<vi> maze, ii source, ii target){
+int dijkstra(int rows, int columns, vector<vi> maze, ii source, ii target){
     vector<vi> sums(rows, vi(columns, INF));
     sums[source.first][source.second] = maze[source.first][source.second];
-    priority_queue<int, viii, greater<iii>> queue;
+    priority_queue<iii, viii, greater<iii> > queue;
     queue.push(iii(0, source));
     
     while(!queue.empty()){
@@ -72,7 +72,7 @@ int main() {
 	        }
 	        cin.ignore(columns, '\n'); 
 	    }
-	    djikstra(rows, columns, maze, ii(0, 0), ii(rows - 1, columns - 1));
+	    dijkstra(rows, columns, maze, ii(0, 0), ii(rows - 1, columns - 1));
 	}
 	return 0;
 }

@@ -13,10 +13,10 @@ typedef vector<int> vi;
 
 int INF = 1000000000;
 
-int djikstra(int caseNr, vector<vii> adjList, int source, int target){
+int dijkstra(int caseNr, vector<vii> adjList, int source, int target){
     vi latencies(adjList.size(), INF);
     latencies[source] = 0;
-    priority_queue<int, vii, greater<ii>> queue;
+    priority_queue<ii, vii, greater<ii>> queue;
     queue.push(ii(0, source));
 
     while(!queue.empty()){
@@ -57,7 +57,7 @@ int main() {
             servers[server1].push_back(ii(server2, latency));
             servers[server2].push_back(ii(server1, latency));
         }
-        djikstra(i + 1, servers, s, t);
+        dijkstra(i + 1, servers, s, t);
     }
     return 0;
 }
